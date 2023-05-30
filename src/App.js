@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import OracleContents from "./OracleContents";
 import OracleAside from "./OracleAside";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-  background-color: green;
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: black;
 `;
 const MainHeader = styled.header`
-  width: 70%;
+  width: 85%;
   height: 150px;
   background-color: black;
   display: flex;
@@ -25,7 +26,7 @@ const MainHeader = styled.header`
 `;
 
 const MainWrapper = styled.div`
-  background-color: green;
+  background-color: black;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -38,7 +39,9 @@ function App() {
     <div className="App">
       <Wrapper>
         <MainHeader>
-          <div className="headertext">Oracle Functions</div>
+          <Link to="/">
+            <div className="headertext">Oracle Functions</div>
+          </Link>
         </MainHeader>
         <MainWrapper>
           <OracleAside />

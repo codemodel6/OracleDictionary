@@ -6,3 +6,9 @@
     EXQuery : "",
     EXExplanation : "",
 },
+
+  {
+    Name: "",
+    Query: "",
+    Explanation: "",
+  },

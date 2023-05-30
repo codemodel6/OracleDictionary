@@ -9,8 +9,7 @@ const data10 = [
     EXQuery:
       "SELECT EMPLOYEE_ID, EMPLOYEE_NAME, SYS_CONNECT_BY_PATH(EMPLOYEE_NAME, '/') AS PATH\nFROM EMPLOYEE\nSTART WITH MANAGER_ID IS NULL\nCONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;",
     EXExplanation:
-      "EMPLOYEE 테이블을 계층적으로 조회하면서 각 노드의 경로를 " /
-      " 구분자로 연결한 문자열을 반환합니다.",
+      "EMPLOYEE 테이블을 계층적으로 조회하면서 각 노드의 경로를 구분자로 연결한 문자열을 반환합니다.",
   },
 ];
 

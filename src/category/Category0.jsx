@@ -1,6 +1,9 @@
-import styled from "styled-components";
+import React from "react";
 
-export const ContentsWrapper = styled.div`
+import styled from "styled-components";
+import { data001, data002, data003 } from "../data/Data0";
+
+const HomeStyle = styled.div`
   .title {
     background-color: black;
     color: white;
@@ -64,7 +67,7 @@ export const ContentsWrapper = styled.div`
     background-color: white;
     border: 2px solid #e2e2e2;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 130px;
     padding: 10px;
 
     .sutTitle {
@@ -85,7 +88,7 @@ export const ContentsWrapper = styled.div`
 
     .QurryExplanation {
       font-size: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 120px;
     }
 
     .ImageDiv {
@@ -108,3 +111,49 @@ export const ContentsWrapper = styled.div`
     }
   }
 `;
+
+const Home = () => {
+  return (
+    <HomeStyle>
+      <div className="title">0. SQL문</div>
+      <div className="name">DDL - [ CREATE, ALTER, DROP ]</div>
+      <div className="contentWrapper">
+        {data001.map((it, idx) => (
+          <div key={idx}>
+            <div className="sutTitle">{it.Name}</div>
+            <div className="QueryWrapper">
+              <div className="Query">{it.Query}</div>
+            </div>
+            <div className="QurryExplanation">{it.Explanation}.</div>
+          </div>
+        ))}
+      </div>
+      <div className="name">DML - [ SELECT, INSERT, DELETE, UPDATE ]</div>
+      <div className="contentWrapper">
+        {data002.map((it, idx) => (
+          <div key={idx}>
+            <div className="sutTitle">{it.Name}</div>
+            <div className="QueryWrapper">
+              <div className="Query">{it.Query}</div>
+            </div>
+            <div className="QurryExplanation">{it.Explanation}.</div>
+          </div>
+        ))}
+      </div>
+      <div className="name">DCL - [ GRANT, REVOKE, COMMIT, ROLLBACK ]</div>
+      <div className="contentWrapper">
+        {data003.map((it, idx) => (
+          <div key={idx}>
+            <div className="sutTitle">{it.Name}</div>
+            <div className="QueryWrapper">
+              <div className="Query">{it.Query}</div>
+            </div>
+            <div className="QurryExplanation">{it.Explanation}.</div>
+          </div>
+        ))}
+      </div>
+    </HomeStyle>
+  );
+};
+
+export default Home;

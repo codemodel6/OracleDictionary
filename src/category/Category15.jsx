@@ -8,7 +8,7 @@ const Category15 = () => {
     <ContentsWrapper>
       <div className="title">{"15. 집계 함수"}</div>
       {data15.map((it, idx) => (
-        <CategoryContents it={it} idx={idx} />
+        <CategoryContents key={idx} it={it} idx={idx} />
       ))}
     </ContentsWrapper>
   );

@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const MainAside = styled.aside`
-  background-color: yellow;
-  width: 150px;
+  width: 200px;
   height: 600px;
   position: fixed;
+  height: 750px;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   ul {
-    padding-top: 50px;
-    background-color: orange;
+    padding-top: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,53 +27,121 @@ const MainAside = styled.aside`
       height: 100%;
       text-align: center;
       align-items: center;
-      background-color: blue;
+      margin-bottom: 15px;
 
       .linkCSS {
         color: white;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
 `;
 
-const OracleHeader = () => {
+const OracleAside = () => {
   return (
     <MainAside>
       <ul>
         <li>
-          <Link className="linkCSS" to="/hi">
-            1. aside
+          <div className="linkCSS">--------스크롤--------</div>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/0">
+            0. SQL문
           </Link>
         </li>
         <li>
-          <Link className="linkCSS" to="/hi">
-            2. aside
+          <Link className="linkCSS" to="/1">
+            1. 수치함수
           </Link>
         </li>
         <li>
-          <Link className="linkCSS" to="/hi">
-            1.aside
+          <Link className="linkCSS" to="/2">
+            2. 문자값을 반환하는 문자 함수
           </Link>
         </li>
         <li>
-          <Link className="linkCSS" to="/hi">
-            1.aside
+          <Link className="linkCSS" to="/3">
+            3. NLS 문자 함수
           </Link>
         </li>
         <li>
-          <Link className="linkCSS" to="/hi">
-            1.aside
+          <Link className="linkCSS" to="/4">
+            4. 수치값을 반환하는 문자함수
           </Link>
         </li>
         <li>
-          <Link className="linkCSS" to="/hi">
-            1.aside
+          <Link className="linkCSS" to="/5">
+            5. 일시 함수
           </Link>
         </li>
         <li>
-          <Link className="linkCSS" to="/hi">
-            1.aside
+          <Link className="linkCSS" to="/6">
+            6. 일반적인 비교 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/7">
+            7. 변환 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/8">
+            8. LARGE OBJECT(LOB) 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/9">
+            9. 수집 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/10">
+            10. 계층 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/11">
+            11. XML 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/12">
+            12. 인코딩 함수와 디코딩 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/13">
+            13. NULL 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/14">
+            14. 환경 함수 와 식별자 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/15">
+            15. 집계 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/16">
+            16. 분석 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/17">
+            17. Object 참조 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/18">
+            18. 모델 함수
+          </Link>
+        </li>
+        <li>
+          <Link className="linkCSS" to="/19">
+            19. 기타 단일행 함수
           </Link>
         </li>
       </ul>
@@ -74,4 +149,4 @@ const OracleHeader = () => {
   );
 };
 
-export default OracleHeader;
+export default OracleAside;
