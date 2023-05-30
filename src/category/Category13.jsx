@@ -1,17 +1,17 @@
 import React from "react";
-import data3 from "../data/Data3";
+import data13 from "../data/Data13";
 import { ContentsWrapper } from "./CategoryStyle";
 import CategoryContents from "./CategoryContents";
 
-const Category3 = () => {
+const Category13 = () => {
   return (
     <ContentsWrapper>
-      <div className="title">{"3. NLS 문자 함수"}</div>
-      {data3.map((it, idx) => (
+      <div className="title">{"13. NULL 함수"}</div>
+      {data13.map((it, idx) => (
         <CategoryContents it={it} idx={idx} />
       ))}
     </ContentsWrapper>
   );
 };
 
-export default Category3;
+export default Category13;
