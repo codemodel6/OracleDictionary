@@ -24,7 +24,7 @@ import one24 from "../../src/image/1/1-24.png";
 
 const data1 = [
   {
-    Name: "ABS",
+    Name: "1-1. ABS",
     Explanation: "ABS는 숫자를 받으면 그 숫자를 절대값으로 바꿔주는 함수이다.",
     Query: "SELECT ABS(-15) '절대값' FROM DUAL;",
     Details:
@@ -32,28 +32,28 @@ const data1 = [
     image: one1,
   },
   {
-    Name: "ACOLS",
+    Name: "1-2. ACOLS",
     Explanation: "ACOS는 받은 숫자의 역코사인값을 반환한다.",
     Query: "SELECT ACOS(.4)'역코싸인' FROM DUAL;",
     Details: "역코사인값을 반환",
     image: one2,
   },
   {
-    Name: "ASING",
+    Name: "1-3. ASING",
     Explanation: "ASING(n)은 n의 역사인값을 반환한다. ",
     Query: "SELECT ASIN(.3) '역싸인' FROM DUAL;",
     Details: "역사인값을 반환",
     image: one3,
   },
   {
-    Name: "ATAN2",
+    Name: "1-4. ATAN2",
     Explanation: "ATAN2(n,m)은 n/m의 역탄젠트 값을 반환한다.",
     Query: "SELECT ATAN2(.3, .2) 'Arc_Tangent2' FROM DUAL;",
     Details: "",
     image: one4,
   },
   {
-    Name: "BITAND",
+    Name: "1-5. BITAND",
     Explanation:
       "BITAND 함수는 인수1과 인수2의 대해 AND 연산을 수행하여 정수를 반환한다.",
     Query: "SELECT BITAND(5, 3) AS Result FROM DUAL;",
@@ -61,63 +61,63 @@ const data1 = [
     image: one5,
   },
   {
-    Name: "CEIL",
+    Name: "1-6. CEIL",
     Explanation: "CEIL 함수는 인수를 올림하여 정수를 구하는 함수이다.",
     Query: "SELECT CEIL(15.7) 'Ceiling' FROM DUAL;",
     Details: "인수를 올림",
     image: one6,
   },
   {
-    Name: "COS",
+    Name: "1-7. COS",
     Explanation: "COS는 n의 값의 코사인값을 반환한다.",
     Query: "SELECT COS(180 * 3.14159265359/180) 'Cosine' FROM DUAL;",
     Details: "코사인값을 반환",
     image: one7,
   },
   {
-    Name: "COSH",
+    Name: "1-8. COSH",
     Explanation: "COSH는 n의 쌍곡 코사인값을 반환한다.",
     Query: "SELECT COSH(0) 'Hyperbolic cosine' FROM DUAL;",
     Details: "쌍곡 코사인값을 반환",
     image: one8,
   },
   {
-    Name: "EXP",
+    Name: "1-9. EXP",
     Explanation: "EXP는 e의 n제곱 값을 반환한다",
     Query: "SELECT EXP(4) 'e의 4제곱' FROM DUAL;",
     Details: "n제곱 값을 반환",
     image: one9,
   },
   {
-    Name: "FLOOR",
+    Name: "1-10. FLOOR",
     Explanation: "FLOOR 함수는 인수를 내림하여 정수로 나타낸다.",
     Query: "SELECT FLOOR(15.7) 'Floor' FROM DUAL;",
     Details: "인수를 내림",
     image: one10,
   },
   {
-    Name: "LN",
+    Name: "1-11. LN",
     Explanation: "LN함수는 입력값의 자연 로그값을 반환한다.",
     Query: "SELECT LN(95) 'Natural log of 95' FROM DUAL;",
     Details: "자연 로그값 반환",
     image: one11,
   },
   {
-    Name: "LOG",
+    Name: "1-12. LOG",
     Explanation: "LOG(m,n)은 밑을 m으로 한 n의 로그값을 반환한다.",
     Query: "SELECT LOG(10,100) 'Log base 10 of 100' FROM DUAL;",
     Details: "로그값 반환",
     image: one12,
   },
   {
-    Name: "MOD",
+    Name: "1-13. MOD",
     Explanation: "MOD(m,n)은 m을 n으로 나눈나머지 값을 반환한다.",
     Query: "SELECT MOD(11,4) 'Modulus' FROM DUAL;",
     Details: "나머지 값 반환",
     image: one13,
   },
   {
-    Name: "NANVL",
+    Name: "1-14. NANVL",
     Explanation: "NANVL 함수는 NULL 값을 다른 값으로 대체하는 기능을 제공한다.",
     Query: "SELECT NANVL(Salary, 0) AS NewSalary FROM Employees;",
     Details:
@@ -125,21 +125,21 @@ const data1 = [
     image: "",
   },
   {
-    Name: "POWER",
+    Name: "1-15. POWER",
     Explanation: "POWER(m,n)는 m의 n승 값을 반환한다.",
     Query: "SELECT POWER(3,2) 'Raised' FROM DUAL;",
     Details: "m의 n승 값 반환",
     image: one15,
   },
   {
-    Name: "REMAINDER",
+    Name: "1-16. REMAINDER",
     Explanation: "REMAINDER(m,n) 함수는 m을 n으로 나눈 나머지를 반환한다.",
     Query: "SELECT REMAINDER(13, 4) AS Result FROM DUAL;",
     Details: "나머지 반환",
     image: one16,
   },
   {
-    Name: "ROUND",
+    Name: "1-17. ROUND",
     Explanation:
       "ROUND 함수는 입력값을 소수점 이하를 두 번째 인자값 기준으로 반올림하여 반환한다. 만약 두 번째 인자값을 생략하면 입력값의 소수점을 반올림한다. 소수점 왼쪽의 정수부를 반올림하기 위해 음수값을 지정할수 있다.",
     Query: "SELECT ROUND(15.193,1) 'Round' FROM DUAL;",
@@ -147,7 +147,7 @@ const data1 = [
     image: one17,
   },
   {
-    Name: "SIGN",
+    Name: "1-18. SIGN",
     Explanation:
       "SIGN 함수는 입력값의 부호를 반환한다. 정수면 1 음수면 –1 0이면 0을 반환한다.",
     Query: "SELECT SIGN(-15) 'Sign' FROM DUAL;",
@@ -155,21 +155,21 @@ const data1 = [
     image: one18,
   },
   {
-    Name: "SIN",
+    Name: "1-19. SIN",
     Explanation: "SIN 함수는 입력값의 사인값을 반환한다.",
     Query: "SELECT SIN(30 * 3.14159265359/180) 'Sine of 30 degrees' FROM DUAL;",
     Details: "사인값 반환",
     image: one19,
   },
   {
-    Name: "SQRT",
+    Name: "1-20. SQRT",
     Explanation: "SQRT 함수는 입력값의 제곱근을 반환한다.",
     Query: "SELECT SQRT(4) 'Square root' FROM DUAL;",
     Details: "제곱근 반환",
     image: one20,
   },
   {
-    Name: "TAN",
+    Name: "1-21. TAN",
     Explanation: "TAN 함수는 입력값의 탄젠트값을 반환한다",
     Query:
       "SELECT TAN(135 * 3.14159265359/180) 'Tangent of 135 degrees' FROM DUAL;",
@@ -177,7 +177,7 @@ const data1 = [
     image: one21,
   },
   {
-    Name: "TANH",
+    Name: "1-22. TANH",
     Explanation:
       "TANH함수는 입력값의 쌍곡선 탄젠트(hyperbolic tangent)를 반환한다",
     Query: "SELECT TANH(.5) 'Hyperbolic tangent of .5'  FROM DUAL;",
@@ -185,7 +185,7 @@ const data1 = [
     image: one22,
   },
   {
-    Name: "TRUNC",
+    Name: "1-23. TRUNC",
     Explanation: "TRUNC(n1,n2)함수는 인수 n1을 n2 이하를 절삭한다.",
     Query: "SELECT TRUNC(15.79,1) 'Truncate' FROM DUAL;",
     Details:
@@ -193,7 +193,7 @@ const data1 = [
     image: one23,
   },
   {
-    Name: "WIDTH_BUCKET",
+    Name: "1-24. WIDTH_BUCKET",
     Explanation:
       "WIDTH_BUCKET함수는 주어진 값의 범위 내에서 구간을 지정하는 기능을 제공한다.",
     Query: "SELECT WIDTH_BUCKET(7, 0, 10, 5) AS BucketNumber FROM DUAL;",
