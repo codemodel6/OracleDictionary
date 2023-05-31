@@ -44,7 +44,6 @@ const MainAside = styled.aside`
 
 const OracleAside = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <MainAside>
       <ul>

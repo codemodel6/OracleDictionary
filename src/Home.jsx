@@ -12,6 +12,7 @@ const HomeWrapper = styled.div`
   font-size: 90px;
   border-radius: 50px;
   height: 1000px;
+  margin-bottom: 100px;
 
   .textWrapper {
     color: white;

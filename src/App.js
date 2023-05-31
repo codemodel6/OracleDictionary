@@ -40,7 +40,7 @@ function App() {
       <Wrapper>
         <MainHeader>
           <Link to="/">
-            <div className="headertext">Oracle Functions</div>
+            <div className="headertext">Oracle Dictionary</div>
           </Link>
         </MainHeader>
         <MainWrapper>
