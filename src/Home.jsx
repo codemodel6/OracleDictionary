@@ -33,6 +33,20 @@ const HomeWrapper = styled.div`
     justify-content: center;
     margin-bottom: 30px;
 
+    @keyframes ball {
+      0% {
+        top: 0px;
+      }
+      95% {
+        width: 100px;
+      }
+      to {
+        top: 300px;
+        width: 115px;
+        height: 90px;
+      }
+    }
+
     img {
       width: 300px;
       height: 300px;
