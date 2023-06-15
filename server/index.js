@@ -1,6 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const connectToOracle = require("./data/oracleData");
+
+// CORS 설정
+app.use(cors());
 
 // /1 경로에 대한 처리
 app.get("/1", async (req, res) => {

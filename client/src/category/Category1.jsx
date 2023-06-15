@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import data1 from "../data/Data1";
+import React, { useEffect, useState } from "react";
+// import data1 from "../data/Data1";
 import { ContentsWrapper } from "./CategoryStyle";
 import CategoryContents from "./CategoryContents";
-import { useState } from "react";
 import axios from "axios";
 
 const Category1 = () => {
@@ -10,16 +9,30 @@ const Category1 = () => {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:5000/1");
-    console.log(response);
+    try {
+      const response = await axios.get("http://localhost:5000/1");
+      setData11(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error("데이터 가져오기 오류:", error);
+    }
   };
+
+  // useEffect(() => {
+  //   axios.get("http://localhost:5000/1").then((res) => {
+  //     setData11(res.data);
+  //   });
+  // }, []);
+
+  // console.log(data11);
+
   return (
     <ContentsWrapper>
       <div className="title">{"1. 수차함수"}</div>
-      {data1.map((it, idx) => (
+      {data11.map((it, idx) => (
         <CategoryContents it={it} idx={idx} />
       ))}
     </ContentsWrapper>
