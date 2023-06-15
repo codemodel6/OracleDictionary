@@ -21,6 +21,6 @@ app.get("/2", (req, res) => {
 });
 
 // 서버 시작
-app.listen(3000, () => {
-  console.log("서버가 http://localhost:3000 에서 실행 중입니다.");
+app.listen(5000, () => {
+  console.log("서버가 http://localhost:5000 에서 실행 중입니다.");
 });

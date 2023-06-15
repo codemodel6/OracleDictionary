@@ -3,11 +3,19 @@ import data1 from "../data/Data1";
 import { ContentsWrapper } from "./CategoryStyle";
 import CategoryContents from "./CategoryContents";
 import { useState } from "react";
+import axios from "axios";
 
 const Category1 = () => {
-  // const [data1, setData1] = useState([]);
+  const [data11, setData11] = useState([]);
 
-  // useEffect(() => {});
+  useEffect(() => {
+    fetchData();
+  });
+
+  const fetchData = async () => {
+    const response = await axios.get("http://localhost:5000/1");
+    console.log(response);
+  };
   return (
     <ContentsWrapper>
       <div className="title">{"1. 수차함수"}</div>
