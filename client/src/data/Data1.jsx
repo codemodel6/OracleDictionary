@@ -151,7 +151,7 @@ const data1 = [
     Explanation:
       "SIGN 함수는 입력값의 부호를 반환한다. 정수면 1 음수면 –1 0이면 0을 반환한다.",
     Query: "SELECT SIGN(-15) 'Sign' FROM DUAL;",
-    Details: "부호를] 반환",
+    Details: "부호를 반환",
     image: one18,
   },
   {

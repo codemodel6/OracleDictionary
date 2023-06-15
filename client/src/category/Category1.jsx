@@ -15,19 +15,10 @@ const Category1 = () => {
     try {
       const response = await axios.get("http://localhost:5000/1");
       setData11(response.data);
-      console.log(response.data);
     } catch (error) {
       console.error("데이터 가져오기 오류:", error);
     }
   };
-
-  // useEffect(() => {
-  //   axios.get("http://localhost:5000/1").then((res) => {
-  //     setData11(res.data);
-  //   });
-  // }, []);
-
-  // console.log(data11);
 
   return (
     <ContentsWrapper>
