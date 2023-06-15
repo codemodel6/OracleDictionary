@@ -5,7 +5,7 @@ import CategoryContents from "./CategoryContents";
 import axios from "axios";
 
 const Category1 = () => {
-  const [data11, setData11] = useState([]);
+  const [data1, setData1] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -14,7 +14,7 @@ const Category1 = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get("http://localhost:5000/1");
-      setData11(response.data);
+      setData1(response.data);
     } catch (error) {
       console.error("데이터 가져오기 오류:", error);
     }
@@ -23,7 +23,7 @@ const Category1 = () => {
   return (
     <ContentsWrapper>
       <div className="title">{"1. 수차함수"}</div>
-      {data11.map((it, idx) => (
+      {data1.map((it, idx) => (
         <CategoryContents it={it} idx={idx} />
       ))}
     </ContentsWrapper>

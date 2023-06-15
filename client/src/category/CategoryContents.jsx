@@ -3,14 +3,14 @@ import React from "react";
 const CategoryContents = ({ it, idx }) => {
   return (
     <div key={idx}>
-      <div className="name">{it.NAME}</div>
+      <div className="name">{it.Name}</div>
       <div className="contentWrapper">
-        <div className="Explanation">{it.EEXPLANATION}</div>
+        <div className="Explanation">{it.Explanation}</div>
         <div className="sutTitle">Query</div>
         <div className="QueryWrapper">
-          <div className="Query">{it.QUERY}</div>
+          <div className="Query">{it.Query}</div>
         </div>
-        <div className="QurryExplanation">{it.DETAILS}</div>
+        <div className="QurryExplanation">{it.Details}</div>
         <div className="sutTitle">예시</div>
         <div className="QueryWrapper">
           <div className="ExQuery">{it.EXQuery}</div>

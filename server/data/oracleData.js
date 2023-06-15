@@ -1,6 +1,6 @@
 const oracledb = require("oracledb");
 
-async function connectToOracle(DATA) {
+async function connectToOracle(Query) {
   return new Promise(async (resolve, reject) => {
     try {
       // Oracle 데이터베이스에 연결
@@ -11,18 +11,25 @@ async function connectToOracle(DATA) {
       });
 
       // 연결 성공시 작업 실행
-      // 테이블 조회 쿼리 실행 - NAME컬럼을 기준으로 3번째부터 4번째 까지 가저옴
-      // 이후 4번째가 '.' 일 수도 있으니 REPLACE로 제거 후 NUMBER로 변환
-      const result = await connection.execute(`
-      SELECT * FROM ${DATA} ORDER BY
-      TO_NUMBER(REPLACE(SUBSTR(NAME, 3, 2),'.',''))
-      `);
+      // 테이블 조회 쿼리 실행
+      const result = await connection.execute(Query);
 
       // 객체 key, value 타입으로 변경
       const objResult = result.rows.map((it) => {
         const objRow = {};
         result.metaData.forEach((now, idx) => {
-          objRow[now.name] = it[idx];
+          // key값의 첫글자를 대문자로 변경
+          keyNow =
+            now.name.charAt(0).toUpperCase() + now.name.slice(1).toLowerCase();
+          console.log(keyNow);
+          // 특정값 예외처리
+          if (keyNow === "Exquery") {
+            keyNow = "EXQuery";
+          }
+          if (keyNow === "Exexplanation") {
+            keyNow = "EXExplanation";
+          }
+          objRow[keyNow] = it[idx];
         });
         return objRow;
       });
