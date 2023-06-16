@@ -108,3 +108,72 @@ export const ContentsWrapper = styled.div`
     }
   }
 `;
+
+export const AddDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  margin-top: 30px;
+
+  .addButton {
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    background-color: black;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+    border-radius: 20px;
+  }
+
+  .addTextDiv {
+    width: 1000px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+
+    .textContent {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .addText {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      border: none;
+      resize: none;
+      font-size: 17px;
+      font-weight: 500;
+      color: black;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+    .addText::placeholder {
+      font-size: 17px;
+    }
+  }
+
+  .completeDiv {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+    .addComplete {
+      text-align: center;
+      width: 200px;
+      height: 45px;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 800;
+      color: black;
+      border-radius: 10px;
+    }
+  }
+`;
