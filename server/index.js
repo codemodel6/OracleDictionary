@@ -71,14 +71,15 @@ app.delete("/delete/:id", async (req, res) => {
   }
 });
 
-//patch 요청
+// patch 요청
 app.patch("/patch/:id", async (req, res) => {
   try {
     let patchId = req.params.id;
     const { Name, Explanation, Query, Details, EXQuery, EXExplanation } =
       req.body;
     console.log(Name, Explanation, Query, Details, EXQuery, EXExplanation);
-    const postQuery = `UPDATE DATA${patchId} SET EXPLANATION = '${Explanation}' , QUERY = '${Query}', DETAILS = '${Details}', EXQuery = '${EXQuery}', EXExplanation = '${EXExplanation}' WHERE NAME = '${Name}'`;
+    const postQuery = `UPDATE DATA${patchId} SET EXPLANATION = '${Explanation}', QUERY = '${Query}', DETAILS = '${Details}', EXQuery = '${EXQuery}', EXExplanation = '${EXExplanation}' WHERE NAME = '${Name}'`;
+    console.log(postQuery);
     const postResult = await oraclePost(postQuery);
     res.send(postResult);
   } catch (error) {

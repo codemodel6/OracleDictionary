@@ -22,6 +22,19 @@ const CategoryContents = ({ it, idx, setData19 }) => {
     setEditData({ ...editData, [e.target.name]: e.target.value });
   };
 
+  /** 수정 버튼 */
+  const handleEdit = () => {
+    setEditData({
+      Name: it.Name,
+      Explanation: it.Explanation,
+      Query: it.Query,
+      Details: it.Details,
+      EXQuery: it.EXQuery,
+      EXExplanation: it.EXExplanation,
+    });
+    handleEditToggle();
+  };
+
   /** 완료 버튼 */
   const handleEditComplete = async (e) => {
     console.log(editData);
@@ -115,10 +128,10 @@ const CategoryContents = ({ it, idx, setData19 }) => {
           {editToggle ? (
             <input
               className="ExQuery"
-              placeholder="ExQuery"
+              placeholder="EXQuery"
               onChange={handleEditData}
-              value={editData.ExQuery}
-              name="ExQuery"
+              value={editData.EXQuery}
+              name="EXQuery"
             ></input>
           ) : (
             <div className="ExQuery">{it.EXQuery}</div>
@@ -151,7 +164,7 @@ const CategoryContents = ({ it, idx, setData19 }) => {
           </div>
         ) : (
           <div className="UpDeDiv">
-            <button className="UpdateButton" onClick={handleEditToggle}>
+            <button className="UpdateButton" onClick={handleEdit}>
               수정
             </button>
             <button
