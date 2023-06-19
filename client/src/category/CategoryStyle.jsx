@@ -175,5 +175,10 @@ export const AddDiv = styled.div`
       color: black;
       border-radius: 10px;
     }
+    .addComplete:hover {
+      background-color: black;
+      color: red;
+      border: 2px solid white;
+    }
   }
 `;
