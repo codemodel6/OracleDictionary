@@ -1,4 +1,4 @@
-# 리액트를 이용한 오라클 함수 사전
+# React와 Node.js를 이용한 Oracle 함수 사전
 
 ## 배포 주소
 https://dainty-starburst-30635d.netlify.app/
@@ -6,6 +6,7 @@ https://dainty-starburst-30635d.netlify.app/
 
 ## 사용 기술
 ## FRONT
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
 ### react, styledcomponents, axios
 ## BACK
 ### Node.js, DBeaver, Oracle
