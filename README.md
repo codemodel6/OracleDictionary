@@ -21,12 +21,12 @@ https://dainty-starburst-30635d.netlify.app/
 Netlify는 github에 있는 나의 코드를 웹 사이트 처럼 배포해주는 사이트이다. 매우 간편하게 사이트를 배포할 수 있는 장점이 있다.
 
 ## 설명
-### 전체적인 화면
-<div align='center'>
-<img src="https://velog.velcdn.com/images/codemodel6/post/9c13b97e-4e3f-48c7-8c54-311b50bfdbaf/image.png" width="333" height="300">
-<img src="https://velog.velcdn.com/images/codemodel6/post/b18cd3df-74d1-444f-bc24-9640f368bbe0/image.png" width="333" height="300">
-<img src="https://velog.velcdn.com/images/codemodel6/post/9409f3de-c577-4db9-9802-fa15d6552a6b/image.png" width="333" height="300">
-</div>
+### 화면 구조
+
+|Main|Contents|
+|---|---|
+|<img src="https://velog.velcdn.com/images/codemodel6/post/9c13b97e-4e3f-48c7-8c54-311b50bfdbaf/image.png" width="500" height="300">|<img src="https://velog.velcdn.com/images/codemodel6/post/b18cd3df-74d1-444f-bc24-9640f368bbe0/image.png" width="500" height="300">|
+
 
 <br/><br/><br/>
 
