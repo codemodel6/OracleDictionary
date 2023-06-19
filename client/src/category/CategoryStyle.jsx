@@ -61,6 +61,8 @@ export const ContentsWrapper = styled.div`
   }
 
   .contentWrapper {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border: 2px solid #e2e2e2;
     border-radius: 20px;
@@ -68,6 +70,7 @@ export const ContentsWrapper = styled.div`
     padding: 10px;
 
     .sutTitle {
+      width: max-content;
       font-size: 30px;
       font-weight: 700;
       margin-bottom: 30px;

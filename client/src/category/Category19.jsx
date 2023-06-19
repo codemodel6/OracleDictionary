@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ContentsWrapper } from "./CategoryStyle";
 import CategoryContents from "./CategoryContents";
 import axios from "axios";
-import AddData from "./addDiv/AddData";
+import AddData from "./components/AddData";
 
 const Category19 = () => {
   const [data19, setData19] = useState([]);

@@ -71,6 +71,22 @@ app.delete("/delete/:id", async (req, res) => {
   }
 });
 
+//patch 요청
+app.patch("/patch/:id", async (req, res) => {
+  try {
+    let patchId = req.params.id;
+    const { Name, Explanation, Query, Details, EXQuery, EXExplanation } =
+      req.body;
+    console.log(Name, Explanation, Query, Details, EXQuery, EXExplanation);
+    const postQuery = `UPDATE DATA${patchId} SET EXPLANATION = '${Explanation}' , QUERY = '${Query}', DETAILS = '${Details}', EXQuery = '${EXQuery}', EXExplanation = '${EXExplanation}' WHERE NAME = '${Name}'`;
+    const postResult = await oraclePost(postQuery);
+    res.send(postResult);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("데이터 수정 오류");
+  }
+});
+
 // 서버 시작
 app.listen(5000, () => {
   console.log("서버가 http://localhost:5000 에서 실행 중입니다.");
