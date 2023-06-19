@@ -10,7 +10,7 @@ app.use(cors());
 // Client에서 값을 가져오기 위해 Body를 가져올 수 있는 express.json 사용
 app.use(express.json());
 
-// get 요청
+// DATA1 TABLE에 관한 get 요청
 app.get("/1", async (req, res) => {
   try {
     // NAME컬럼을 기준으로 3번째부터 4번째 까지 가저옴
@@ -25,7 +25,7 @@ app.get("/1", async (req, res) => {
   }
 });
 
-// get 요청
+// DATA19 TABLE에 관한 get 요청
 app.get("/19", async (req, res) => {
   try {
     const Query = "SELECT * FROM DATA19";
@@ -42,8 +42,6 @@ app.post("/post/:id", async (req, res) => {
   try {
     // 요청 주소의 :id값을 가져옴
     const postId = req.params.id;
-    console.log("postId : ", postId);
-    console.log("req.body : ", req.body);
 
     const { Name, Explanation, Query, Details, EXQuery, EXExplanation } =
       req.body;
@@ -55,6 +53,11 @@ app.post("/post/:id", async (req, res) => {
     console.error(error);
     res.status(500).send("데이터 추가 오류");
   }
+});
+
+app.delete("/delete/:id", async (req, res) => {
+  let deleteId = req.params.id;
+  console.log(deleteId);
 });
 
 // 서버 시작

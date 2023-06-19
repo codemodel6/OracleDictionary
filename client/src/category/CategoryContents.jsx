@@ -22,6 +22,10 @@ const CategoryContents = ({ it, idx }) => {
             <img className="ExImage" src={it.image} alt="준비중.."></img>
           </div>
         </div>
+        <div className="UpDeDiv">
+          <button className="UpdateButton">수정</button>
+          <button className="DeleteButton">삭제</button>
+        </div>
       </div>
     </div>
   );

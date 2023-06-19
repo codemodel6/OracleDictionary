@@ -94,7 +94,6 @@ export const ContentsWrapper = styled.div`
       flex-direction: column;
       align-items: center;
       margin-top: 50px;
-      margin-bottom: 30px;
 
       .ExImage {
         width: 200px;
@@ -104,6 +103,31 @@ export const ContentsWrapper = styled.div`
         font-weight: 700;
         color: white;
         text-align: center;
+      }
+    }
+
+    .UpDeDiv {
+      display: flex;
+      justify-content: right;
+
+      .UpdateButton {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        color: blue;
+        cursor: pointer;
+      }
+
+      .DeleteButton {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        color: red;
+        cursor: pointer;
       }
     }
   }
