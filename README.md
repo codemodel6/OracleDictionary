@@ -15,7 +15,7 @@ https://dainty-starburst-30635d.netlify.app/
 오라클의 모든 함수를 정리한 웹 페이지를 만들었다. 모든 오라클 함수들을 정리한 사이트에서 모든 오라클 함수들을 찾아내었다. 이후 Chat GPT에게 함수를 설명해 달라 하고 그 내용을 참조하였다. 
 실행문은 DBeaver에 실행하여 실행 결과를 확인하였다. 오라클의 모든 함수를 챕터별로 더미데이터로 만들었으며 이것을 map을 통해 전부 돌린 간단한 웹 사이트이다.
 
-이후 node.js를 이용해 Oracle DB와 연결하였으며 Client와 Back이 통신하는 CRUD 기능을 모두 구현하였다.
+이후 node.js를 이용해 Oracle DB와 연결하였으며 Client와 Server가 통신하는 CRUD 기능을 모두 구현하였다.
 
 ## 배포
 배포는 Netlify 를 이용해 배포하였다.
