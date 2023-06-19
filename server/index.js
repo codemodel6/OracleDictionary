@@ -3,6 +3,7 @@ const cors = require("cors");
 const app = express();
 const connectToOracle = require("./data/oracleData");
 const oraclePost = require("./data/oraclePost");
+const oracleDelete = require("./data/oracleDelete");
 
 // CORS 설정
 app.use(cors());
@@ -46,7 +47,7 @@ app.post("/post/:id", async (req, res) => {
     const { Name, Explanation, Query, Details, EXQuery, EXExplanation } =
       req.body;
 
-    const insertQuery = `INSERT INTO DATA19 (NAME, EXPLANATION, QUERY, DETAILS, EXQuery, EXExplanation) VALUES ('${Name}','${Explanation}','${Query}','${Details}','${EXQuery}','${EXExplanation}')`;
+    const insertQuery = `INSERT INTO DATA${postId} (NAME, EXPLANATION, QUERY, DETAILS, EXQuery, EXExplanation) VALUES ('${Name}','${Explanation}','${Query}','${Details}','${EXQuery}','${EXExplanation}')`;
     const postResult = await oraclePost(insertQuery);
     res.send(postResult);
   } catch (error) {
@@ -55,9 +56,19 @@ app.post("/post/:id", async (req, res) => {
   }
 });
 
+// delete 요청
 app.delete("/delete/:id", async (req, res) => {
-  let deleteId = req.params.id;
-  console.log(deleteId);
+  try {
+    let deleteId = req.params.id;
+    console.log(deleteId);
+    console.log("body : ", req.body);
+    const deleteQuery = `DELETE FROM DATA${deleteId} WHERE NAME = '${req.body.Name}'`;
+    const deleteResult = await oracleDelete(deleteQuery);
+    res.send(deleteResult);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("데이터 삭제 오류");
+  }
 });
 
 // 서버 시작

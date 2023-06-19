@@ -50,7 +50,6 @@ const Category19 = () => {
 
   /** Post 요청 보내는 함수 */
   const handlePost = async () => {
-    console.log("textData : ", textData);
     try {
       const response = await axios.post(
         "http://localhost:5000/post/19",
@@ -60,8 +59,9 @@ const Category19 = () => {
 
       // 완료 후 에디터 닫음
       handleToggel();
+      window.scrollTo(0, 0);
     } catch (error) {
-      console.error("post 오류", error);
+      console.error("post 오류 ", error);
     }
   };
 
@@ -69,7 +69,7 @@ const Category19 = () => {
     <ContentsWrapper>
       <div className="title">{"19. 기타 단일행 함수"}</div>
       {data19.map((it, idx) => (
-        <CategoryContents it={it} idx={idx} />
+        <CategoryContents it={it} idx={idx} setData19={setData19} />
       ))}
       <AddDiv>
         {toggle ? (

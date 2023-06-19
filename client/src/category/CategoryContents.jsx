@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const CategoryContents = ({ it, idx }) => {
+const CategoryContents = ({ it, idx, setData19 }) => {
+  const handleDelete = async (Name) => {
+    console.log(Name);
+    try {
+      const response = await axios.delete("http://localhost:5000/delete/19", {
+        data: { Name },
+      });
+      setData19(response.data);
+      window.scrollTo(0, 0);
+    } catch (error) {
+      console.error("delete 오류 ", error);
+    }
+  };
+
   return (
     <div key={idx}>
       <div className="name">{it.Name}</div>
@@ -24,7 +38,12 @@ const CategoryContents = ({ it, idx }) => {
         </div>
         <div className="UpDeDiv">
           <button className="UpdateButton">수정</button>
-          <button className="DeleteButton">삭제</button>
+          <button
+            className="DeleteButton"
+            onClick={() => handleDelete(it.Name)}
+          >
+            삭제
+          </button>
         </div>
       </div>
     </div>
