@@ -6,10 +6,10 @@ https://dainty-starburst-30635d.netlify.app/
 
 ## 사용 기술
 ## FRONT
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"><img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=notion&logoColor=white"><img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=notion&logoColor=white">
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"><img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"><img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white">
 
 ## BACK
-<img src="https://img.shields.io/badge/nodedotjs-339933?style=for-the-badge&logo=notion&logoColor=white"><img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=notion&logoColor=white"><img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=notion&logoColor=white">
+<img src="https://img.shields.io/badge/nodedotjs-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"><img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white"><img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
 
 ## 개발 과정
 오라클의 모든 함수를 정리한 웹 페이지를 만들었다. 모든 오라클 함수들을 정리한 사이트에서 모든 오라클 함수들을 찾아내었다. 이후 Chat GPT에게 함수를 설명해 달라 하고 그 내용을 참조하였다. 
